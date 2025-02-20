@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #050505;
+}
+
+.container-one {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: min(1em, 3%);
+}
+.container-one img {
+  max-width: 75%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container-one h1 {
+  color: wheat;
+  text-align: center;
+  font-family: "Delius", serif;
+  font-weight: 100;
+  font-size: 3.8rem;
+}
+.container-one p {
+  color: wheat;
+  text-align: center;
+  font-family: "Delius", serif;
+  line-height: 1.3;
+  font-size: 1.3rem;
+  opacity: 0.5;
+  margin: 0.3rem 0;
+}
+.container-one p br {
+  display: none;
+}
+
+@media (min-width: 1020px) {
+  .container-one img {
+    max-width: 27%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .container-one p br {
+    display: block;
+  }
+  .container-one h1 {
+    color: wheat;
+    text-align: center;
+    font-family: "Delius", serif;
+    font-weight: 100;
+    font-size: 7.8rem;
+  }
+  .top {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .top .navbar {
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    position: relative;
+    background-image: linear-gradient(rgba(69, 68, 68, 0.6862745098), transparent);
+    border: 1px white solid;
+    opacity: 0.9;
+    padding: 5px 5px;
+    margin: 1rem;
+    margin-left: 25rem;
+    margin-right: 25rem;
+    color: #d4b998;
+  }
+  .top .logo {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: lowercase;
+    font-family: "Delius", serif;
+  }
+  .top .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  .top .nav-links li a {
+    text-decoration: none;
+    color: #d4b998;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-family: "Delius", serif;
+  }
+  .top .btn {
+    background-color: #d4b998;
+    color: #13100e;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: "Delius", serif;
+  }
+  .top .btn:hover {
+    background-color: #c0a882;
+  }
+}
+.container-two {
+  width: 100%;
+  padding: 0.1rem 0.8rem;
+  display: flex;
+  justify-content: center;
+}
+.container-two .marquee {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 1rem;
+}
+.container-two .marquee::before {
+  content: "";
+  height: 100%;
+  width: 50%;
+  background-image: linear-gradient(to right, #050505, transparent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.container-two .marquee::after {
+  content: "";
+  height: 100%;
+  width: 50%;
+  background-image: linear-gradient(to left, #050505, transparent);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.container-two .marquee .text {
+  height: 50px;
+  display: flex;
+  color: azure;
+  gap: 3rem;
+  padding: 0 1.5rem;
+  animation: marquee 10s linear infinite both;
+}
+
+.container-two .marquee .text p {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.top {
+  position: fixed;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar {
+  text-align: center;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  background-image: linear-gradient(rgba(69, 68, 68, 0.6862745098), transparent);
+  border: 1px white solid;
+  opacity: 0.9;
+  padding: 5px 5px;
+  margin: 1rem;
+  color: #d4b998;
+}
+
+.logo {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: lowercase;
+  font-family: "Delius", serif;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #d4b998;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-family: "Delius", serif;
+}
+
+.btn {
+  background-color: #d4b998;
+  color: #13100e;
+  padding: 2px 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 5px;
+  font-weight: bold;
+  border-radius: 5px;
+  font-family: "Delius", serif;
+}
+
+.btn:hover {
+  background-color: #c0a882;
+}/*# sourceMappingURL=style.css.map */
